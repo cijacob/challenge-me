@@ -14,3 +14,46 @@
  *= require_self
  */
  @import "foundation";
+ @import url('https://fonts.googleapis.com/css?family=Palanquin');
+ *{
+  font-family: 'Palanquin', sans-serif;
+ }
+ h1{
+   text-align: center; 
+ }
+ .social-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .social-footer-icons {
+    ul.menu.simple{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0; 
+    }
+    li{
+      list-style: none;
+      margin: 0 20px;
+    }
+    li:last-of-type {
+      margin-right: 0;
+    }
+
+    .fa {
+      font-size: 1.3rem;
+      color: white;
+      &:hover {
+        color: darken(blue, 25%);
+        transition: color 0.3s ease-in;
+      }
+    }
+  }
+}
+
