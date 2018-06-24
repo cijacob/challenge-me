@@ -15,11 +15,21 @@
  */
  @import "foundation";
  @import url('https://fonts.googleapis.com/css?family=Palanquin');
+ $pink-pastel: #f0675c; 
+ $white_two: #e9e7d5; 
+ $turquoise: #3fd8c9;
+ $dark_pink: #d4273e; 
+ $dark_blue: #143163; 
  *{
   font-family: 'Palanquin', sans-serif;
  }
  h1{
    text-align: center; 
+ }
+ .top-bar{
+   a{
+     color: $white_two !important;
+   }
  }
  .social-footer {
   position: absolute;
@@ -31,7 +41,15 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  .social-footer-icons {
+  .social-footer-icons, .social-footer-center {
+    li{
+      font-size: 1.3rem;
+      color: $white_two;
+      &:hover {
+        color: $pink-pastel;
+        transition: color 0.3s ease-in;
+      }
+    }
     ul.menu.simple{
       display: flex;
       justify-content: space-between;
@@ -45,12 +63,11 @@
     li:last-of-type {
       margin-right: 0;
     }
-
     .fa {
       font-size: 1.3rem;
-      color: white;
+      color: $white_two;
       &:hover {
-        color: darken(blue, 25%);
+        color: $pink-pastel;
         transition: color 0.3s ease-in;
       }
     }
