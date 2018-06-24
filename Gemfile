@@ -33,7 +33,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'sass-rails'
 gem 'compass-rails'
 gem 'simple_form'
 group :development, :test do
