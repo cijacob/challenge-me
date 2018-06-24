@@ -42,7 +42,7 @@
   align-items: center;
   justify-content: space-around;
   .social-footer-icons, .social-footer-center {
-    li{
+    a{
       font-size: 1.3rem;
       color: $white_two;
       &:hover {
