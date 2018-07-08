@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  get '/:locale' => 'welcome#index'
   get 'welcome/index'
   get '/about', to: 'welcome#about'
   get '/career', to: 'welcome#career'
