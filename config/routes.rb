@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'categories/index'
+
   devise_for :users
   get 'welcome/index'
   get '/about', to: 'welcome#about'
