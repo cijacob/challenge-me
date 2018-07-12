@@ -26,6 +26,11 @@
  h1{
    text-align: center; 
  }
+ .current_user{
+   color: $white_two;
+   padding: 0 15px;
+  line-height: 45px;
+ }
  .top-bar{
    a{
      color: $white_two !important;

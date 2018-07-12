@@ -8,6 +8,8 @@ fr:
   be_our_partner: Devenir notre partenaire
   sign_in: S'enregistrer
   log_in: Se connecter
+  log_out: Se déconnecter
+  session: Ma session
   first_paragraph_about_us: lorem ipsum
   second_paragraph_about_us: lorem ipsum deux
   our_team: Notre équipe
