@@ -20,5 +20,9 @@ fr:
   discover: Voir toute la liste
   categories_in_progress: Categories en cours
   challenge_in_progress: Challenges en cours
+
+  challenges:
+    new:
+      give_name: Donner un nom
   
   

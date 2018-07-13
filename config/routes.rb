@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-
-  get 'challenges/index'
-  get 'challenges/new'
+  
   get 'categories/index'
 
-  resources :categories do
-   resources :challenges
+  scope "/:locale" do
+    resources :challenges
+
+    resources :categories do
+      resources :challenges
+    end
   end
 
   devise_for :users

@@ -1,6 +1,7 @@
 <h1><%= t('submit_new_challenge')%></h1>
 
-<%= simple_form_for @challenge, url: challenges_new_path(@challenge) do |challenge| %>
+<%= simple_form_for @challenge do |challenge| %>
   <%= challenge.input :name, label: t('give_name') %>
+  <%= challenge.input :description, as: :text, label:t('add_description') %>
   <%= challenge.button :submit %>
 <% end %>
