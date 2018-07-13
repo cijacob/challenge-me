@@ -1,2 +1,9 @@
-<h1>Challenges#index</h1>
-<p>Find me in app/views/challenges/index.html.erb</p>
+<h1><%= t('challenge_by_category') %></h1>
+<ul>
+  <% @challenges.each do |ch|%>
+    <li><%= ch.name %></li>
+  <% end %>
+</ul>
+
+
+<p><%= t('not_found') %></p>

@@ -16,6 +16,9 @@ fr:
   my_challenges: Mes défis
 
   challenge_by_category: Toutes les categories
-  not_found: Vous n'avez pas trouver la categorie que vous recherchiez? Soumettez en une!
+  not_found: Vous n'avez pas trouvé ce que vous recherchiez? Créez la votre!
+  discover: Voir toute la liste
+  categories_in_progress: Categories en cours
+  challenge_in_progress: Challenges en cours
   
   
