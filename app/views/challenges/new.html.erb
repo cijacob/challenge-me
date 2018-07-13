@@ -1,2 +1,6 @@
-<h1>Challenges#new</h1>
-<p>Find me in app/views/challenges/new.html.erb</p>
+<h1><%= t('submit_new_challenge')%></h1>
+
+<%= simple_form_for @challenge, url: challenges_new_path(@challenge) do |challenge| %>
+  <%= challenge.input :name, label: t('give_name') %>
+  <%= challenge.button :submit %>
+<% end %>

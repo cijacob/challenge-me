@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  
-  get 'home/index'
 
   get 'challenges/index'
-
   get 'challenges/new'
-
   get 'categories/index'
+
+  resources :categories do
+   resources :challenges
+  end
 
   devise_for :users
   get 'welcome/index'
