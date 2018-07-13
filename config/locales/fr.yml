@@ -23,5 +23,11 @@ fr:
 
   give_name: Donner un nom
   add_description: Ajouter une description 
+  date:
+    order:
+      - :day
+      - :month
+      - :year
+    month_names: [~, Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Aout, Septembre, Octobre, Novembre, Décembre]
   
   

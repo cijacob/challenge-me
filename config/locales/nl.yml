@@ -19,3 +19,10 @@ nl:
   discover: Ontdek
   categories_in_progress: Categories in progress
   challenge_in_progress: Challenges in progress
+
+  date:
+    order:
+      - :day
+      - :month
+      - :year
+    month_names: [~, Januari, Februari, Maart, April, Mei, Juni, Juli, August, September, October, November, December]

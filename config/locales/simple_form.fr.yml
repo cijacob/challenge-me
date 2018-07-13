@@ -29,7 +29,5 @@ fr:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
-    challenges:
-      new:
-        give_name: Donner un nom
-        submit: Créer
+    select:
+      January: Janvier

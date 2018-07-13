@@ -1,7 +1,11 @@
 <h1><%= t('submit_new_challenge')%></h1>
+<div class="container">
+  <%= simple_form_for @challenge do |challenge| %>
+    <div class="form_for name"><%= challenge.input :name, label: t('give_name') %></div> 
+    <div class="form_for description"><%= challenge.input :description, as: :text, label:t('add_description') %></div> 
+    <div class="form_for start_date"><%= challenge.input :start_date, as: :date, order: [:day, :month, :year]%></div> 
+    <div class="form_for end_date"><%= challenge.input :end_date, as: :date, order: [:day, :month, :year]%></div> 
+    <div class="form_for imput"><%= challenge.button :submit %></div> 
+  <% end %>
+</div>
 
-<%= simple_form_for @challenge do |challenge| %>
-  <%= challenge.input :name, label: t('give_name') %>
-  <%= challenge.input :description, as: :text, label:t('add_description') %>
-  <%= challenge.button :submit %>
-<% end %>
