@@ -2,10 +2,24 @@
 <div class="container">
   <div class="hp__slide">
     <div class="inner_hp__slide">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= link_to image_tag(src="anh-nguyen-437873-unsplash.jpg"), :class => "d-block w-100 "%>
+          </div>
+          <div class="carousel-item">
+            <%= link_to image_tag(src="marko-blazevic-725854-unsplash.jpg"), :class => "d-block w-100 "%>
+          </div>
+          <div class="carousel-item">
+            <%= link_to image_tag(src="steve-roe-734236-unsplash.jpg"), :class => "d-block w-100 "%>
+          </div>
+        </div>
+      </div>
       <div class="left">
         <h5>
           <%= t('challenge_in_progress')%>
         </h5>
+        
         <%= link_to t('discover'), challenges_path %>
       </div>
       <div class="right">
