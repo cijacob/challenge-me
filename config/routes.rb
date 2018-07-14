@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   get 'categories/index'
 
   scope "/:locale" do
+
+    authenticate :user do
+      resources :challenges , only: [:new, :create, :update, :destroy]
+      resources :categories, only: [:new, :create, :update, :destroy]
+    end 
     resources :challenges
 
     resources :categories do
