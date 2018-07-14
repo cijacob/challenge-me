@@ -34,7 +34,10 @@ gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap', '~> 4.1', '>= 4.1.1'
+gem 'autoprefixer-rails'
 gem 'jquery-rails'
+gem 'bootstrap-datepicker-rails'
+
 #gem 'foundation-rails'
 gem 'autoprefixer-rails'
 group :development, :test do
