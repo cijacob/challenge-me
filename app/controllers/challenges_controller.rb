@@ -10,12 +10,13 @@ class ChallengesController < ApplicationController
   end
 
   def create
-    @challenge = Challenge.new(challenge_params)
-    @challenge.save
-    redirect_to @challenge
+    @challenge = Challenge.create!(challenge_params)
+    @challenge.errors.full_messages
+    redirect_to challenges_path
   end 
 
   def show
+    @challenge = Challenge.find(params[:id])
   end 
 
   def destroy
@@ -24,7 +25,7 @@ class ChallengesController < ApplicationController
   private
 
   def challenge_params
-    params.require(:challenge).permit(:name, :description, :start_date, :end_date)
+    params.require(:challenge).permit(:name, :description, :start_date, :end_date, :category_id)
   end 
 
 end

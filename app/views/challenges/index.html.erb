@@ -1,10 +1,8 @@
-<h1><%= t('challenge_by_category') %></h1>
+<h1><%= t('all_challenges') %></h1>
 <ul>
   <% @challenges.each do |ch|%>
     <li><%= ch.name %></li>
   <% end %>
 </ul>
 
-
-<p><%= t('not_found') %></p>
 <%= link_to t('submit_new_challenge'), new_challenge_path%>
