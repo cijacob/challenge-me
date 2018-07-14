@@ -1,1 +1,6 @@
 <h1><%= t('add_new_category') %></h1>
+
+<%= simple_form_for @category do |cat| %>
+  <div class="form_for category name"><%= cat.input :name, label: t('give_name')%></div>
+  <div class="form_for imput"><%= cat.button :submit %></div> 
+<% end %>
