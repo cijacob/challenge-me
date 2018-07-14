@@ -4,7 +4,8 @@
     <div class="form_for name"><%= challenge.input :name, label: t('give_name') %></div> 
     <div class="form_for description"><%= challenge.input :description, as: :text, label:t('add_description') %></div>
     <div class="form_for start_date"><%= challenge.input :start_date, as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') }  %></div>
-    <div class="form_for end_date"><%= challenge.input :end_date, as: :date,  input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') }  %></div>
+    <div class="form_for end_date"><%= challenge.input :end_date, as: :string,  input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') }  %></div>
+    
     <div class="form_for imput"><%= challenge.button :submit %></div> 
   <% end %>
 </div>

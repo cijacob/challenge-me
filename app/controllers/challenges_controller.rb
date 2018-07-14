@@ -10,9 +10,21 @@ class ChallengesController < ApplicationController
   end
 
   def create
+    @challenge = Challenge.new(challenge_params)
+    @challenge.save
+    redirect_to @challenge
+  end 
+
+  def show
   end 
 
   def destroy
   end
+
+  private
+
+  def challenge_params
+    params.require(:challenge).permit(:name, :description, :start_date, :end_date)
+  end 
 
 end
