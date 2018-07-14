@@ -1,31 +1,33 @@
-<nav class="top-bar" data-topbar role="navigation">
-  <ul class="title-area">
-    <li class="name">
-      <h1><%= link_to "Challenge me", root_path %></h1>
-    </li>
-     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>About Us</span></a></li>
-  </ul>
-
-  <section class="top-bar-section">
-    <!-- Right Nav Section -->
-    <ul class="right">
-      <li class="active"><a href="#">Find a challenge</a></li>
-      <li><%= link_to t('french'), locale: "fr" %></li>
-      <li><%= link_to t('nederlands'), locale: "nl" %></li>
-      <li><%= link_to t('english'), locale: "en"%> </li> 
-    </ul>
-
-    <!-- Left Nav Section -->
-    <ul class="left">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <%= link_to "Challenge me", root_path, :class => "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
       <% if user_signed_in? %>
-        <li class="current_user"><%= current_user.email %></Li>
-        <li><%= link_to t('session'), user_session_path%></li>
-        <li><%= link_to t('log_out'), destroy_user_session_path, :method => :delete %></li>
+        <li class="nav-item active current_user"><%= current_user.email %></Li>
+        <li class="nav-item"><%= link_to t('session'), user_session_path, :class => "nav-link" %></li>
+        <li class="nav-item"><%= link_to t('log_out'), destroy_user_session_path, :method => :delete, :class => "nav-link" %></li>
       <% else %>
-        <li><%= link_to t('sign_in'), new_user_registration_path %></li>
-        <li><%= link_to t('log_in'), new_user_session_path %></li>
+        <li class="nav-item"><%= link_to t('sign_in'), new_user_registration_path, :class => "nav-link" %></li>
+        <li class="nav-item"><%= link_to t('log_in'), new_user_session_path, :class => "nav-link" %></li>
       <% end %> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= t('language') %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to t('english'), locale: "en", :class => "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to t('french'), locale: "fr", :class => "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to t('nederlands'), locale: "nl", :class => "dropdown-item" %>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Find a challenge <span class="sr-only">(current)</span></a>
+      </li>
     </ul>
-  </section>
+  </div>
 </nav>
