@@ -66,4 +66,14 @@
     }
   }
 }
+.simple_form.new_challenge{
+  width:100%; 
+  display : flex; 
+  justify-content: center; 
+  .input.string.challenge_name,
+  .input.string.challenge_description{
+    display: flex;
+    background-color: #f0675c; 
+  }
+}
 
