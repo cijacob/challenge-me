@@ -11,7 +11,6 @@ class ChallengesController < ApplicationController
 
   def create
     @challenge = Challenge.create!(challenge_params)
-    @challenge.errors.full_messages
     redirect_to challenges_path
   end 
 

@@ -5,7 +5,7 @@
     <div class="form_for description"><%= challenge.input :description, as: :text, label:t('add_description'), :class => "form-control" %></div>
     <div class="form_for start_date"><%= challenge.input :start_date, as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') }  %></div>
     <div class="form_for end_date"><%= challenge.input :end_date, as: :string,  input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') }  %></div>
-    <div class="form_for category"><%= challenge.collection_select(:category_id, Category.all, :id, :name) %> </div>
+    <div class="form_for category"><%= challenge.collection_select(:category_id, Category.all, :id, :name) %></div>
     <div class="form_for imput"><%= challenge.button :submit, :class => "btn btn-primary" %></div> 
   <% end %>
 </div>

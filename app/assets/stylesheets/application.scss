@@ -21,7 +21,7 @@
  }
  .navbar{
    a{
-     color: $pink-pastel !important;
+     color: $white_two !important;
    }
  }
  .social-footer {
@@ -76,4 +76,21 @@
     background-color: #f0675c; 
   }
 }
+.carousel.slide{
+  height:200px;
+  border: 1px solid black;
+  .carousel-item.active{
+    background-color: #3fd8c9; 
+    width: 200px; 
+    display: block !important; 
+  }
+}
+.choose-content{
+  margin-top: 50px; 
+  display: flex;
+  align-items: stretch;
+  .col-6{
+    text-align: center;
 
+  }
+}

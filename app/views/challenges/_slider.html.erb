@@ -1,0 +1,28 @@
+<div class="hp__slide">
+  <div class="inner_hp__slide">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <% @challenges.each do |ch|%>
+            <div class="carousel-item">
+              <li>
+                <%= ch.name %>
+                <%= link_to image_tag(src="anh-nguyen-437873-unsplash.jpg"), :class => "d-block w-100 "%>
+              </li>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="choose-content">
+      <div class="col-6">
+        <h5><%= t('challenge_in_progress')%></h5>    
+        <%= link_to t('discover'), challenges_path %>
+      </div>
+      <div class="col-6">
+        <h5><%= t('categories_in_progress')%></h5>
+        <%= link_to t('discover'), categories_path %>
+      </div>
+    </div>
+  <div>
+</div>
