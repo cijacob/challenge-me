@@ -3,14 +3,15 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <% @challenges.each do |ch|%>
-            <div class="carousel-item">
-              <li>
-                <%= ch.name %>
-                <%= link_to image_tag(src="anh-nguyen-437873-unsplash.jpg"), :class => "d-block w-100 "%>
-              </li>
-            </div>
-          <% end %>
+          <%= @challenges.first.name %><br>
+          <%= @challenges.first.description %>
+        </div>
+        <div class="carousel-item">
+          <%= @challenges.name %>
+        </div>
+        <div class="carousel-item">
+          <%= @challenges.last.name %><br>
+          <%= @challenges.last.description%>
         </div>
       </div>
     </div>
